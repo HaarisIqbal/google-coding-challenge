@@ -5,8 +5,7 @@ package com.google;
 public class VideoPlayer {
 
   private final VideoLibrary videoLibrary;
-  private String currentVideoID; // to keep track of current video playing.
-  private boolean playing = false; // to keep track if currently in play state.
+  private String currentVideoID = null; // to keep track of current video playing.
 
   public VideoPlayer() {
     this.videoLibrary = new VideoLibrary();
@@ -35,16 +34,16 @@ public class VideoPlayer {
 
   public void playVideo(String videoId) {
 
-    // only proceeding for valid videoId
+    // only proceeding for valid videoId.
     if (videoLibrary.getVideo(videoId) != null) {
-
-      if (playing) {
+      
+      // Stop current video from playing.
+      if (currentVideoID != null) {
         stopVideo();
       }
 
       System.out.println("Playing video: " + videoLibrary.getVideo(videoId).getTitle());
-      currentVideoID = videoId; // variable will be updated to new video.
-      playing = true;
+      currentVideoID = videoId; // Variable will be updated to new video.
 
     } else {
       System.out.println("Cannot play video: Video does not exist. Silly User.");
@@ -56,7 +55,6 @@ public class VideoPlayer {
     if (currentVideoID != null) {
       System.out.println("Stopping video: " + videoLibrary.getVideo(currentVideoID).getTitle());
       currentVideoID = null;
-      playing = false;
     } else {
       System.out.println("Cannot stop video: No video is currently playing.");
     }
