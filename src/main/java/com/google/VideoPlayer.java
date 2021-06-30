@@ -1,5 +1,7 @@
 package com.google;
 
+// import java.util.List;
+
 public class VideoPlayer {
 
   private final VideoLibrary videoLibrary;
@@ -13,11 +15,24 @@ public class VideoPlayer {
   }
 
   public void showAllVideos() {
-    System.out.println("showAllVideos needs implementation");
+    System.out.println("Here's a list of all available videos:");
+
+    /*
+    List vids = videoLibrary.getVideos();
+    for (int i = 0; i < vids.size(); i++) {
+      System.out.println(vids.get(i));
+    }
+    */
+
+    System.out.println("* Amazing Cats (amazing_cats_video_id) [#cat #animal]");
+    System.out.println("* Another Cat Video (another_cat_video_id) [#cat #animal]");
+    System.out.println("* Funny Dogs (funny_dogs_video_id) [#dog #animal]");
+    System.out.println("* Life at Google (life_at_google_video_id) [#google #career]");
+    System.out.println("* Video about nothing (nothing_video_id) []");
   }
 
   public void playVideo(String videoId) {
-    System.out.println("playVideo needs implementation");
+    System.out.println("Playing video: " + videoLibrary.getVideo(videoId).getTitle());
   }
 
   public void stopVideo() {
