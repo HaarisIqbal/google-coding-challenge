@@ -92,13 +92,17 @@ public class VideoPlayer {
 
   public void pauseVideo() {
 
-    if (paused) {
-      System.out.println("Video already paused: " +  videoLibrary.getVideo(currentVideoID).getTitle());
+    if (currentVideoID != null) {
+      if (paused) {
+        System.out.println("Video already paused: " +  videoLibrary.getVideo(currentVideoID).getTitle());
+      } else {
+        System.out.println("Pausing video: " + videoLibrary.getVideo(currentVideoID).getTitle());
+        paused = true;
+      }
     } else {
-      System.out.println("Pausing video: " + videoLibrary.getVideo(currentVideoID).getTitle());
-      paused = true;
+      System.out.println("Cannot pause video: No video is currently playing");
     }
-
+    
   }
 
   public void continueVideo() {

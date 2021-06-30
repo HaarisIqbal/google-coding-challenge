@@ -203,7 +203,6 @@ public class Part1Test extends TestBase {
     assertThat(lines[2], containsString("Video already paused: Amazing Cats"));
   }
   
-  /*
   @Test
   public void testPauseVideoNothingPlaying() {
     videoPlayer.pauseVideo();
