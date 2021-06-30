@@ -9,6 +9,7 @@ public class VideoPlayer {
 
   private final VideoLibrary videoLibrary;
   private String currentVideoID = null; // to keep track of current video playing.
+  private boolean paused = false; // to keep track of whether video is in pause state/
 
   public VideoPlayer() {
     this.videoLibrary = new VideoLibrary();
@@ -89,7 +90,8 @@ public class VideoPlayer {
   }
 
   public void pauseVideo() {
-    System.out.println("pauseVideo needs implementation");
+    System.out.println("Pausing video: " + videoLibrary.getVideo(currentVideoID).getTitle());
+    paused = true;
   }
 
   public void continueVideo() {
@@ -113,6 +115,9 @@ public class VideoPlayer {
         if (j != videoLibrary.getVideos().get(j).getTags().size()-1) {printOut += " ";} // Should only add space if not last value.
       }
       printOut += "]";
+
+      // paused state check.
+      if (paused) {printOut += " - PAUSED";}
 
       // Finally, printing out.
       System.out.println(printOut);
