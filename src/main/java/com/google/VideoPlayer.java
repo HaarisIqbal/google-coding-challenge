@@ -35,16 +35,17 @@ public class VideoPlayer {
 
   public void playVideo(String videoId) {
 
-    // regardless of whether a valid videoId has been provided to play, current video will stop playing.
-    if (playing) {
-      stopVideo();
-    }
-
     // only proceeding for valid videoId
     if (videoLibrary.getVideo(videoId) != null) {
+
+      if (playing) {
+        stopVideo();
+      }
+
       System.out.println("Playing video: " + videoLibrary.getVideo(videoId).getTitle());
       currentVideoID = videoId; // variable will be updated to new video.
       playing = true;
+
     } else {
       System.out.println("Cannot play video: Video does not exist. Silly User.");
     }
