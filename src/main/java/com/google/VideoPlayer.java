@@ -55,9 +55,10 @@ public class VideoPlayer {
 
     if (currentVideoID != null) {
       System.out.println("Stopping video: " + videoLibrary.getVideo(currentVideoID).getTitle());
+      currentVideoID = null;
       playing = false;
     } else {
-      System.out.println("There is no video playing at the moment.");
+      System.out.println("Cannot stop video: No video is currently playing.");
     }
 
   }

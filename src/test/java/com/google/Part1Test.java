@@ -78,7 +78,6 @@ public class Part1Test extends TestBase {
     assertThat(lines[1], containsString("Cannot play video: Video does not exist"));
   }
 
-  /*
   @Test
   public void testStopVideo() {
     videoPlayer.playVideo("amazing_cats_video_id");
@@ -104,6 +103,7 @@ public class Part1Test extends TestBase {
         containsString("Cannot stop video: No video is currently playing"));
   }
 
+  /*
   @Test
   public void testStopVideoNothingPlaying() {
     videoPlayer.stopVideo();
