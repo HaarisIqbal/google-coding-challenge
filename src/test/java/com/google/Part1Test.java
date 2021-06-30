@@ -67,7 +67,6 @@ public class Part1Test extends TestBase {
     assertThat(lines[2], containsString("Playing video: Funny Dogs"));
   }
 
-  /*
   @Test
   public void testPlayVideoDontStopPreviousIfNonExistent() {
     videoPlayer.playVideo("amazing_cats_video_id");
@@ -79,6 +78,7 @@ public class Part1Test extends TestBase {
     assertThat(lines[1], containsString("Cannot play video: Video does not exist"));
   }
 
+  /*
   @Test
   public void testStopVideo() {
     videoPlayer.playVideo("amazing_cats_video_id");
