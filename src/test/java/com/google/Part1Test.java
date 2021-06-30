@@ -190,7 +190,6 @@ public class Part1Test extends TestBase {
     assertThat(lines[4], not(containsString("PAUSED")));
   }
 
-  /*
   @Test
   public void testPauseAlreadyPausedVideo() {
     videoPlayer.playVideo("amazing_cats_video_id");

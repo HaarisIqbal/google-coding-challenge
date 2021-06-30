@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.google.Part1Test" time="0.107" tests="16" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.google.Part1Test" time="0.095" tests="17" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/14.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire/surefirebooter2315544200419663919.jar /Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire 2021-06-30T20-32-50_814-jvmRun1 surefire1224956359019180667tmp surefire_05264995930121872138tmp"/>
+    <property name="sun.java.command" value="/Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire/surefirebooter1878771148821716865.jar /Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire 2021-06-30T20-35-56_683-jvmRun1 surefire5449802647717338081tmp surefire_011776405279119824142tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="Part1Test"/>
@@ -29,7 +29,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire/surefirebooter2315544200419663919.jar"/>
+    <property name="surefire.real.class.path" value="/Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire/surefirebooter1878771148821716865.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="14.0.1+14"/>
@@ -54,20 +54,21 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="testStopVideo" classname="com.google.Part1Test" time="0.039"/>
+  <testcase name="testStopVideo" classname="com.google.Part1Test" time="0.035"/>
+  <testcase name="testPauseAlreadyPausedVideo" classname="com.google.Part1Test" time="0.002"/>
   <testcase name="testPlayRandomVideoStopsPreviousVideo" classname="com.google.Part1Test" time="0.003"/>
-  <testcase name="testPlayVideo" classname="com.google.Part1Test" time="0.003"/>
-  <testcase name="testPlayRandomVideo" classname="com.google.Part1Test" time="0.003"/>
-  <testcase name="testStopVideoTwice" classname="com.google.Part1Test" time="0.002"/>
+  <testcase name="testPlayVideo" classname="com.google.Part1Test" time="0.002"/>
+  <testcase name="testPlayRandomVideo" classname="com.google.Part1Test" time="0.002"/>
+  <testcase name="testStopVideoTwice" classname="com.google.Part1Test" time="0.001"/>
   <testcase name="testPlayVideoStopPrevious" classname="com.google.Part1Test" time="0.002"/>
-  <testcase name="testPauseVideo" classname="com.google.Part1Test" time="0.002"/>
-  <testcase name="testShowPlaying" classname="com.google.Part1Test" time="0.009"/>
-  <testcase name="testPlayVideoDontStopPreviousIfNonExistent" classname="com.google.Part1Test" time="0.002"/>
-  <testcase name="testPauseVideoShowVideo" classname="com.google.Part1Test" time="0.003"/>
-  <testcase name="testPauseVideoPlayVideo" classname="com.google.Part1Test" time="0.003"/>
+  <testcase name="testPauseVideo" classname="com.google.Part1Test" time="0.001"/>
+  <testcase name="testShowPlaying" classname="com.google.Part1Test" time="0.01"/>
+  <testcase name="testPlayVideoDontStopPreviousIfNonExistent" classname="com.google.Part1Test" time="0.003"/>
+  <testcase name="testPauseVideoShowVideo" classname="com.google.Part1Test" time="0.002"/>
+  <testcase name="testPauseVideoPlayVideo" classname="com.google.Part1Test" time="0.002"/>
   <testcase name="testPlayVideoNonExistent" classname="com.google.Part1Test" time="0.002"/>
   <testcase name="testNumberOfVideos" classname="com.google.Part1Test" time="0.002"/>
   <testcase name="testShowAllVideos" classname="com.google.Part1Test" time="0.002"/>
-  <testcase name="testShowNothingPlaying" classname="com.google.Part1Test" time="0.002"/>
+  <testcase name="testShowNothingPlaying" classname="com.google.Part1Test" time="0.003"/>
   <testcase name="testStopVideoNothingPlaying" classname="com.google.Part1Test" time="0.002"/>
 </testsuite>
