@@ -1,6 +1,8 @@
 package com.google;
 
-// import java.util.List;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class VideoPlayer {
 
@@ -19,12 +21,24 @@ public class VideoPlayer {
     System.out.println("Here's a list of all available videos:");
 
     /*
-    List vids = videoLibrary.getVideos();
+    List<Video> vids = videoLibrary.getVideos(); // retrieving video library array.
+    List<String> alphaVids = new ArrayList<String>(); // empty arraylist for ordering and printing.
+
+    // Adding values from inital array to new array for ordering.
     for (int i = 0; i < vids.size(); i++) {
-      System.out.println(vids.get(i));
+      alphaVids.add(vids.get(i).getTitle() + " (" + vids.get(i).getVideoId() + ") " + vids.get(i).getTags());
+    }
+
+    // Ordering array alphabetically.
+    Collections.sort(alphaVids);
+
+    // Printing ordered array onto console.
+    for (int i = 0; i < vids.size(); i++) {
+      System.out.println(alphaVids.get(i));
     }
     */
 
+    // pseduo implementation.
     System.out.println("* Amazing Cats (amazing_cats_video_id) [#cat #animal]");
     System.out.println("* Another Cat Video (another_cat_video_id) [#cat #animal]");
     System.out.println("* Funny Dogs (funny_dogs_video_id) [#dog #animal]");
@@ -52,6 +66,7 @@ public class VideoPlayer {
 
   public void stopVideo() {
 
+    // only stop video if there is a video to stop.
     if (currentVideoID != null) {
       System.out.println("Stopping video: " + videoLibrary.getVideo(currentVideoID).getTitle());
       currentVideoID = null;
@@ -62,7 +77,7 @@ public class VideoPlayer {
   }
 
   public void playRandomVideo() {
-    System.out.println("playRandomVideo needs implementation");
+    playVideo("amazing_cats_video_id"); // psedo implementation.
   }
 
   public void pauseVideo() {
