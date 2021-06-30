@@ -91,8 +91,9 @@ public class VideoPlayer {
   }
 
   public void pauseVideo() {
-
+    // checking if there is a video to pause.
     if (currentVideoID != null) {
+      // checking if already paused.
       if (paused) {
         System.out.println("Video already paused: " +  videoLibrary.getVideo(currentVideoID).getTitle());
       } else {
@@ -102,11 +103,22 @@ public class VideoPlayer {
     } else {
       System.out.println("Cannot pause video: No video is currently playing");
     }
-    
+
   }
 
   public void continueVideo() {
-    System.out.println("continueVideo needs implementation");
+    // checking if there is a video to continue.
+    if (currentVideoID != null) {
+      // checking if already playing.
+      if (paused) {
+        System.out.println("Continuing video: " + videoLibrary.getVideo(currentVideoID).getTitle());
+        paused = false;
+      } else {
+        System.out.println("Cannot continue video: Video is not paused");
+      }
+    } else {
+      System.out.println("Cannot continue video: No video is currently playing");
+    }
   }
 
   public void showPlaying() {

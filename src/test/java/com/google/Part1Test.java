@@ -211,7 +211,6 @@ public class Part1Test extends TestBase {
         containsString("Cannot pause video: No video is currently playing"));
   }
 
-  /*
   @Test
   public void testContinueVideo() {
     videoPlayer.playVideo("amazing_cats_video_id");
@@ -225,7 +224,6 @@ public class Part1Test extends TestBase {
     assertThat(lines[2], containsString("Continuing video: Amazing Cats"));
   }
 
-  /*
   @Test
   public void testContinueVideoNotPaused() {
     videoPlayer.playVideo("amazing_cats_video_id");
@@ -237,13 +235,11 @@ public class Part1Test extends TestBase {
         containsString("Cannot continue video: Video is not paused"));
   }
 
-  /*
   @Test
   public void testContinueVideoNothingPlaying() {
     videoPlayer.continueVideo();
     assertEquals(1, getOutputLines().length);
     assertThat(outputStream.toString(),
         containsString("Cannot continue video: No video is currently playing"));
-  
-  */
+  }
 }
