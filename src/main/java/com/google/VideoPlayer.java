@@ -32,7 +32,11 @@ public class VideoPlayer {
   }
 
   public void playVideo(String videoId) {
-    System.out.println("Playing video: " + videoLibrary.getVideo(videoId).getTitle());
+    if (videoLibrary.getVideo(videoId) != null) {
+      System.out.println("Playing video: " + videoLibrary.getVideo(videoId).getTitle());
+    } else {
+      System.out.println("Cannot play video: Video does not exist. Silly User.");
+    }
   }
 
   public void stopVideo() {

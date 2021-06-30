@@ -47,8 +47,7 @@ public class Part1Test extends TestBase {
     assertEquals(1, getOutputLines().length);
     assertThat(outputStream.toString(), containsString("Playing video: Amazing Cats"));
   }
-
-  /*
+  
   @Test
   public void testPlayVideoNonExistent() {
     videoPlayer.playVideo("some_other_video_that_doesnt_exist");
@@ -56,6 +55,7 @@ public class Part1Test extends TestBase {
     assertThat(outputStream.toString(), containsString("Cannot play video: Video does not exist"));
   }
 
+  /*
   @Test
   public void testPlayVideoStopPrevious() {
     videoPlayer.playVideo("amazing_cats_video_id");
