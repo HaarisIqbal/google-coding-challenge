@@ -21,13 +21,23 @@ public class VideoPlayer {
   public void showAllVideos() {
     System.out.println("Here's a list of all available videos:");
 
-    /*
     List<Video> vids = videoLibrary.getVideos(); // retrieving video library array.
     List<String> alphaVids = new ArrayList<String>(); // empty arraylist for ordering and printing.
+    String appVal; // String to append to empty arraylist.
 
     // Adding values from inital array to new array for ordering.
     for (int i = 0; i < vids.size(); i++) {
-      alphaVids.add(vids.get(i).getTitle() + " (" + vids.get(i).getVideoId() + ") " + vids.get(i).getTags());
+      appVal = vids.get(i).getTitle() + " (" + vids.get(i).getVideoId() + ") " + "[";
+
+      // adding tags to the end of the input seperately before placing into array
+      for (int j = 0; j < vids.get(i).getTags().size(); j++) {
+        appVal += vids.get(i).getTags().get(j);
+        if (j != vids.get(i).getTags().size()-1) {appVal += " ";} // Should only add space if not last value.
+      }
+      appVal += "]";
+
+      // Placing into array to be ordered.
+      alphaVids.add(appVal);
     }
 
     // Ordering array alphabetically.
@@ -37,14 +47,6 @@ public class VideoPlayer {
     for (int i = 0; i < vids.size(); i++) {
       System.out.println(alphaVids.get(i));
     }
-    */
-
-    // pseduo implementation.
-    System.out.println("* Amazing Cats (amazing_cats_video_id) [#cat #animal]");
-    System.out.println("* Another Cat Video (another_cat_video_id) [#cat #animal]");
-    System.out.println("* Funny Dogs (funny_dogs_video_id) [#dog #animal]");
-    System.out.println("* Life at Google (life_at_google_video_id) [#google #career]");
-    System.out.println("* Video about nothing (nothing_video_id) []");
   }
 
   public void playVideo(String videoId) {
@@ -95,7 +97,30 @@ public class VideoPlayer {
   }
 
   public void showPlaying() {
-    System.out.println("showPlaying needs implementation");
+
+    if (currentVideoID != null) {
+      //System.out.println("Currently playing: Amazing Cats (amazing_cats_video_id) [#cat #animal]"); //psedo code.
+
+      // Preparing printout.
+      String printOut = "Currently playing: " + 
+                      videoLibrary.getVideo(currentVideoID).getTitle() + " (" + 
+                      videoLibrary.getVideo(currentVideoID).getTitle() + ") " +
+                       "[";
+
+      // adding tags to the end of the input seperately before placing into array
+      for (int j = 0; j < videoLibrary.getVideo(currentVideoID).getTags().size(); j++) {
+        printOut += videoLibrary.getVideos().get(j).getTags().get(j);
+        if (j != videoLibrary.getVideos().get(j).getTags().size()-1) {printOut += " ";} // Should only add space if not last value.
+      }
+      printOut += "]";
+
+      // Finally, printing out.
+      System.out.println(printOut);
+
+    } else {
+      System.out.println("No video is currently playing. Foolish user.");
+    }
+
   }
 
   public void createPlaylist(String playlistName) {
