@@ -104,7 +104,7 @@ public class VideoPlayer {
       // Preparing printout.
       String printOut = "Currently playing: " + 
                       videoLibrary.getVideo(currentVideoID).getTitle() + " (" + 
-                      videoLibrary.getVideo(currentVideoID).getTitle() + ") " +
+                      videoLibrary.getVideo(currentVideoID).getVideoId() + ") " +
                        "[";
 
       // adding tags to the end of the input seperately before placing into array

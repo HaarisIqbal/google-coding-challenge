@@ -130,7 +130,6 @@ public class Part1Test extends TestBase {
     assertThat(lines[2], matchesPattern(PLAYING_RANDOM_VIDEO_PATTERN));
   }
 
-  /*
   @Test
   public void testShowPlaying() {
     videoPlayer.playVideo("amazing_cats_video_id");
