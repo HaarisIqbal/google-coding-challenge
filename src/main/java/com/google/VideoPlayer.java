@@ -5,6 +5,8 @@ package com.google;
 public class VideoPlayer {
 
   private final VideoLibrary videoLibrary;
+  private String currentVideoID;
+  private boolean playing = false;
 
   public VideoPlayer() {
     this.videoLibrary = new VideoLibrary();
@@ -32,15 +34,29 @@ public class VideoPlayer {
   }
 
   public void playVideo(String videoId) {
+
+    if (playing) {
+      stopVideo();
+    }
+
     if (videoLibrary.getVideo(videoId) != null) {
       System.out.println("Playing video: " + videoLibrary.getVideo(videoId).getTitle());
+      currentVideoID = videoId;
+      playing = true;
     } else {
       System.out.println("Cannot play video: Video does not exist. Silly User.");
     }
   }
 
   public void stopVideo() {
-    System.out.println("stopVideo needs implementation");
+
+    if (currentVideoID != null) {
+      System.out.println("Stopping video: " + videoLibrary.getVideo(currentVideoID).getTitle());
+      playing = false;
+    } else {
+      System.out.println("There is no video playing at the moment.");
+    }
+
   }
 
   public void playRandomVideo() {
