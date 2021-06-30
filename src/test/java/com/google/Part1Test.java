@@ -174,7 +174,6 @@ public class Part1Test extends TestBase {
         "Currently playing: Amazing Cats (amazing_cats_video_id) [#cat #animal] - PAUSED"));
   }
 
-  /*
   @Test
   public void testPauseVideoPlayVideo() {
     videoPlayer.playVideo("amazing_cats_video_id");

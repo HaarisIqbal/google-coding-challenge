@@ -56,9 +56,10 @@ public class VideoPlayer {
     if (videoLibrary.getVideo(videoId) != null) {
       
       // Stop current video from playing.
-      if (currentVideoID != null) {
-        stopVideo();
-      }
+      if (currentVideoID != null) {stopVideo();}
+
+      // unpause
+      if (paused) {paused = false;}
 
       System.out.println("Playing video: " + videoLibrary.getVideo(videoId).getTitle());
       currentVideoID = videoId; // Variable will be updated to new video.
