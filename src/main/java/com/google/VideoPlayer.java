@@ -3,6 +3,7 @@ package com.google;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class VideoPlayer {
 
@@ -77,7 +78,12 @@ public class VideoPlayer {
   }
 
   public void playRandomVideo() {
-    playVideo("amazing_cats_video_id"); // psedo implementation.
+    // Choosing random video from video library.
+    Random r = new Random();
+    int randomVid = r.nextInt(videoLibrary.getVideos().size());
+
+    // PLaying selected random video.
+    playVideo(videoLibrary.getVideos().get(randomVid).getVideoId());
   }
 
   public void pauseVideo() {

@@ -111,7 +111,6 @@ public class Part1Test extends TestBase {
         containsString("Cannot stop video: No video is currently playing"));
   }
 
-  /*
   @Test
   public void testPlayRandomVideo() {
     videoPlayer.playRandomVideo();
@@ -119,7 +118,6 @@ public class Part1Test extends TestBase {
     assertThat(outputStream.toString(), matchesPattern(PLAYING_RANDOM_VIDEO_PATTERN));
   }
 
-  /*
   @Test
   public void testPlayRandomVideoStopsPreviousVideo() {
     videoPlayer.playVideo("amazing_cats_video_id");
@@ -145,6 +143,7 @@ public class Part1Test extends TestBase {
         containsString("Currently playing: Amazing Cats (amazing_cats_video_id) [#cat #animal]"));
   }
 
+  /*
   @Test
   public void testShowNothingPlaying() {
     videoPlayer.showPlaying();
@@ -152,6 +151,7 @@ public class Part1Test extends TestBase {
     assertThat(outputStream.toString(), containsString("No video is currently playing"));
   }
 
+  /*
   @Test
   public void testPauseVideo() {
     videoPlayer.playVideo("amazing_cats_video_id");
@@ -163,6 +163,7 @@ public class Part1Test extends TestBase {
     assertThat(lines[1], containsString("Pausing video: Amazing Cats"));
   }
 
+  /*
   @Test
   public void testPauseVideoShowVideo() {
     videoPlayer.playVideo("amazing_cats_video_id");
