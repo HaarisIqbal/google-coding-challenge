@@ -1,3 +1,5 @@
+/** Unit Tests for fuctionality of application. */
+
 package com.google;
 
 import org.junit.jupiter.api.Test;
@@ -99,7 +101,6 @@ public class Part2Test extends TestBase {
     assertThat(lines[4], containsString("my_playlist"));
   }
 
-  /*
   @Test
   public void testShowPlaylist() {
     videoPlayer.createPlaylist("my_playlist");

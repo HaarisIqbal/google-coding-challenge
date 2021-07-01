@@ -1,3 +1,7 @@
+/** 
+* VideoPlayer Class for main functionalty of commands in application.
+*/
+
 package com.google;
 
 import java.util.List;
@@ -202,7 +206,7 @@ public class VideoPlayer {
     }
 
     System.out.println("Showing all playlists:");
-    
+
     // Print all playlists.
     for (String key : playlists.keySet()) {
       System.out.println(key);
@@ -210,7 +214,7 @@ public class VideoPlayer {
   }
 
   public void showPlaylist(String playlistName) {
-    System.out.println("showPlaylist needs implementation");
+    System.out.println("Showing playlist: " + playlistName);
   }
 
   public void removeFromPlaylist(String playlistName, String videoId) {
