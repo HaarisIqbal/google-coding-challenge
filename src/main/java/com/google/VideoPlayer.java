@@ -2,6 +2,8 @@ package com.google;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.Collections;
 import java.util.Random;
 
@@ -10,7 +12,7 @@ public class VideoPlayer {
   private final VideoLibrary videoLibrary;
   private String currentVideoID = null; // to keep track of current video playing.
   private boolean paused = false; // to keep track of whether video is in pause state/
-  private List<String> playlists= new ArrayList<String>(); // keeping track of playlists.
+  private Map<String, List<String>> playlists= new HashMap<>(); // keeping track of playlists using hashmap, with key linked to list of ids
 
   public VideoPlayer() {
     this.videoLibrary = new VideoLibrary();
@@ -154,8 +156,8 @@ public class VideoPlayer {
 
   public void createPlaylist(String playlistName) {
     // only add to playlists list if not already there.
-    if (!playlists.contains(playlistName.toLowerCase())) {
-      playlists.add(playlistName.toLowerCase()); // all playlists are case insensitive.
+    if (!playlists.containsKey(playlistName.toLowerCase())) {
+      playlists.put(playlistName.toLowerCase(), null); // all playlists are case insensitive.
       System.out.println("Successfully created new playlist: " + playlistName);
     } else {
       System.out.println("Cannot create playlist: A playlist with the same name already exists");

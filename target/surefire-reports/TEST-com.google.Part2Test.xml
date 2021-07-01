@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.google.Part2Test" time="0.048" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.google.Part2Test" time="0.051" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/14.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire/surefirebooter12743261064058501112.jar /Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire 2021-07-01T12-44-10_012-jvmRun1 surefire11854449664345001863tmp surefire_015688610198789179237tmp"/>
+    <property name="sun.java.command" value="/Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire/surefirebooter303441534365863799.jar /Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire 2021-07-01T12-58-46_275-jvmRun1 surefire11273394759551493858tmp surefire_05043012858930359903tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="Part2Test"/>
@@ -29,7 +29,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire/surefirebooter12743261064058501112.jar"/>
+    <property name="surefire.real.class.path" value="/Users/haarisiqbal/Documents/GitHub/google-coding-challenge/target/surefire/surefirebooter303441534365863799.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="14.0.1+14"/>
@@ -54,6 +54,6 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="testCreateExistingPlaylist" classname="com.google.Part2Test" time="0.035"/>
+  <testcase name="testCreateExistingPlaylist" classname="com.google.Part2Test" time="0.036"/>
   <testcase name="testCreatePlaylist" classname="com.google.Part2Test" time="0.002"/>
 </testsuite>
