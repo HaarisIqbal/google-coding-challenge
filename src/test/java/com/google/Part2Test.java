@@ -86,7 +86,6 @@ public class Part2Test extends TestBase {
     assertThat(outputStream.toString(), containsString("No playlists exist yet"));
   }
 
-  /*
   @Test
   public void testShowAllPlaylists() {
     videoPlayer.createPlaylist("my_playlist");

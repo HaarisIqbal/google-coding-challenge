@@ -195,8 +195,17 @@ public class VideoPlayer {
   }
 
   public void showAllPlaylists() {
+    // Return alert message for lack fo playlists.
     if (playlists.size() == 0) {
       System.out.println("No playlists exist yet");
+      return;
+    }
+
+    System.out.println("Showing all playlists:");
+    
+    // Print all playlists.
+    for (String key : playlists.keySet()) {
+      System.out.println(key);
     }
   }
 
