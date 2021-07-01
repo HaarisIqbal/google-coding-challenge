@@ -168,11 +168,17 @@ public class VideoPlayer {
     String playlistNameLower = playlistName.toLowerCase(); // All playlists are case insensitive.
     List<String> plVideos; // List for VideoID's in playlist.
 
+    // Stop if VideoId does not exist.
+    if (videoLibrary.getVideo(videoId) == null) {
+      System.out.println("Cannot add video to my_playlist: Video does not exist");
+      return;
+    }
+
     if (playlists.containsKey(playlistNameLower)) {
 
       plVideos = playlists.get(playlistNameLower); // retrieving list of VideoID's from playlist.
 
-      // Stop if VideoID is already apart of the playlist.
+      // Stop if VideoId is already apart of the playlist.
       if (plVideos.contains(videoId)) {
         System.out.println("Cannot add video to my_PLAYlist: Video already added");
         return;

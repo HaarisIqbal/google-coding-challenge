@@ -49,7 +49,6 @@ public class Part2Test extends TestBase {
     assertThat(lines[2], containsString("Cannot add video to my_PLAYlist: Video already added"));
   }
 
-  /*
   @Test
   public void testAddVideoToPlaylistNonExistentVideo() {
     videoPlayer.createPlaylist("my_playlist");
