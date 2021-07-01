@@ -152,7 +152,7 @@ public class VideoPlayer {
   }
 
   public void createPlaylist(String playlistName) {
-    System.out.println("createPlaylist needs implementation");
+    System.out.println("Successfully created new playlist: " + playlistName);
   }
 
   public void addVideoToPlaylist(String playlistName, String videoId) {
