@@ -165,15 +165,23 @@ public class VideoPlayer {
   }
 
   public void addVideoToPlaylist(String playlistName, String videoId) {
-    playlistName = playlistName.toLowerCase();
-    List<String> plVideos;
+    String playlistNameLower = playlistName.toLowerCase(); // All playlists are case insensitive.
+    List<String> plVideos; // List for VideoID's in playlist.
 
-    if (playlists.containsKey(playlistName)) {
-      plVideos = playlists.get(playlistName); // retrieving list of VideoID's from playlist.
+    if (playlists.containsKey(playlistNameLower)) {
+
+      plVideos = playlists.get(playlistNameLower); // retrieving list of VideoID's from playlist.
+
+      // Stop if VideoID is already apart of the playlist.
+      if (plVideos.contains(videoId)) {
+        System.out.println("Cannot add video to my_PLAYlist: Video already added");
+        return;
+      }
+
       plVideos.add(videoId); // adding new videoID to list.
-      playlists.put(playlistName, plVideos); // adding updated list into playlist.
+      playlists.put(playlistNameLower, plVideos); // adding updated list into playlist.
 
-      System.out.println("Added video to my_PLAYlist: " + videoLibrary.getVideo(videoId).getTitle());
+      System.out.println("Added video to " + playlistName + ": " + videoLibrary.getVideo(videoId).getTitle());
     }
   }
 

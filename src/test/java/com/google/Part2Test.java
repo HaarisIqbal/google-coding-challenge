@@ -36,7 +36,6 @@ public class Part2Test extends TestBase {
     assertThat(outputStream.toString(), containsString("Added video to my_PLAYlist: Amazing Cats"));
   }
 
-  /*
   @Test
   public void testAddToPlaylistAlreadyAdded() {
     videoPlayer.createPlaylist("my_playlist");
