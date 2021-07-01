@@ -71,7 +71,6 @@ public class Part2Test extends TestBase {
         containsString("Cannot add video to another_playlist: Playlist does not exist"));
   }
 
-  /*
   @Test
   public void testAddVideoToPlaylistNoVideoNoPlaylist() {
     videoPlayer.addVideoToPlaylist("another_playlist", "does_not_exist_video_id");
