@@ -174,6 +174,7 @@ public class VideoPlayer {
       return;
     }
 
+    // Only proceed if PlayList exists.
     if (playlists.containsKey(playlistNameLower)) {
 
       plVideos = playlists.get(playlistNameLower); // retrieving list of VideoID's from playlist.
@@ -188,6 +189,8 @@ public class VideoPlayer {
       playlists.put(playlistNameLower, plVideos); // adding updated list into playlist.
 
       System.out.println("Added video to " + playlistName + ": " + videoLibrary.getVideo(videoId).getTitle());
+    } else {
+      System.out.println("Cannot add video to " + playlistName + ": Playlist does not exist");
     }
   }
 
