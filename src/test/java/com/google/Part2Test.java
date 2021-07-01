@@ -79,7 +79,6 @@ public class Part2Test extends TestBase {
         containsString("Cannot add video to another_playlist: Playlist does not exist"));
   }
 
-  /*
   @Test
   public void testShowAllPlaylistsNoPlaylistsExist() {
     videoPlayer.showAllPlaylists();
@@ -87,6 +86,7 @@ public class Part2Test extends TestBase {
     assertThat(outputStream.toString(), containsString("No playlists exist yet"));
   }
 
+  /*
   @Test
   public void testShowAllPlaylists() {
     videoPlayer.createPlaylist("my_playlist");
@@ -100,6 +100,7 @@ public class Part2Test extends TestBase {
     assertThat(lines[4], containsString("my_playlist"));
   }
 
+  /*
   @Test
   public void testShowPlaylist() {
     videoPlayer.createPlaylist("my_playlist");
@@ -119,6 +120,7 @@ public class Part2Test extends TestBase {
         containsString("Amazing Cats (amazing_cats_video_id) [#cat #animal]"));
   }
 
+  /*
   @Test
   public void showPlaylistAfterRemoveAVideoFromPlaylistThenReAdd() {
     videoPlayer.createPlaylist("mY_plaYList");
@@ -137,6 +139,7 @@ public class Part2Test extends TestBase {
         containsString("Amazing Cats (amazing_cats_video_id) [#cat #animal]"));
   }
 
+  /*
   @Test
   public void testShowPlaylistNonExistent() {
     videoPlayer.showPlaylist("my_playlist");
@@ -145,6 +148,7 @@ public class Part2Test extends TestBase {
         "Cannot show playlist my_playlist: Playlist does not exist"));
   }
 
+  /*
   @Test
   public void testRemoveFromPlaylist() {
     videoPlayer.createPlaylist("my_PLAYlist");
@@ -163,6 +167,7 @@ public class Part2Test extends TestBase {
         containsString("Cannot remove video from my_PLAYlist: Video is not in playlist"));
   }
 
+  /*
   @Test
   public void testRemoveFromPlaylistVideoNotInPlaylist() {
     videoPlayer.createPlaylist("my_playlist");

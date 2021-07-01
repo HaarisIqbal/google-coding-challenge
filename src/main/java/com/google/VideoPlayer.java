@@ -195,7 +195,9 @@ public class VideoPlayer {
   }
 
   public void showAllPlaylists() {
-    System.out.println("showAllPlaylists needs implementation");
+    if (playlists.size() == 0) {
+      System.out.println("No playlists exist yet");
+    }
   }
 
   public void showPlaylist(String playlistName) {
