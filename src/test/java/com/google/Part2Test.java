@@ -15,7 +15,6 @@ public class Part2Test extends TestBase {
         containsString("Successfully created new playlist: my_PLAYlist"));
   }
 
-  /*
   @Test
   public void testCreateExistingPlaylist() {
     videoPlayer.createPlaylist("my_playlist");
@@ -28,6 +27,7 @@ public class Part2Test extends TestBase {
         containsString("Cannot create playlist: A playlist with the same name already exists"));
   }
 
+  /*
   @Test
   public void testAddToPlaylist() {
     videoPlayer.createPlaylist("my_playlist");
@@ -37,6 +37,7 @@ public class Part2Test extends TestBase {
     assertThat(outputStream.toString(), containsString("Added video to my_PLAYlist: Amazing Cats"));
   }
 
+  /*
   @Test
   public void testAddToPlaylistAlreadyAdded() {
     videoPlayer.createPlaylist("my_playlist");
@@ -50,6 +51,7 @@ public class Part2Test extends TestBase {
     assertThat(lines[2], containsString("Cannot add video to my_PLAYlist: Video already added"));
   }
 
+  /*
   @Test
   public void testAddVideoToPlaylistNonExistentVideo() {
     videoPlayer.createPlaylist("my_playlist");
@@ -64,6 +66,7 @@ public class Part2Test extends TestBase {
         containsString("Cannot add video to my_playlist: Video does not exist"));
   }
 
+  /*
   @Test
   public void testAddVideoToPlaylistNonExistent() {
     videoPlayer.addVideoToPlaylist("another_playlist", "amazing_cats_video_id");
@@ -72,6 +75,7 @@ public class Part2Test extends TestBase {
         containsString("Cannot add video to another_playlist: Playlist does not exist"));
   }
 
+  /*
   @Test
   public void testAddVideoToPlaylistNoVideoNoPlaylist() {
     videoPlayer.addVideoToPlaylist("another_playlist", "does_not_exist_video_id");
@@ -80,6 +84,7 @@ public class Part2Test extends TestBase {
         containsString("Cannot add video to another_playlist: Playlist does not exist"));
   }
 
+  /*
   @Test
   public void testShowAllPlaylistsNoPlaylistsExist() {
     videoPlayer.showAllPlaylists();
