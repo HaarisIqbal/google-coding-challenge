@@ -157,7 +157,7 @@ public class VideoPlayer {
   public void createPlaylist(String playlistName) {
     // only add to playlists list if not already there.
     if (!playlists.containsKey(playlistName.toLowerCase())) {
-      playlists.put(playlistName.toLowerCase(), null); // all playlists are case insensitive.
+      playlists.put(playlistName.toLowerCase(), new ArrayList<String>()); // all playlists are case insensitive.
       System.out.println("Successfully created new playlist: " + playlistName);
     } else {
       System.out.println("Cannot create playlist: A playlist with the same name already exists");
@@ -165,7 +165,16 @@ public class VideoPlayer {
   }
 
   public void addVideoToPlaylist(String playlistName, String videoId) {
-    System.out.println("addVideoToPlaylist needs implementation");
+    playlistName = playlistName.toLowerCase();
+    List<String> plVideos;
+
+    if (playlists.containsKey(playlistName)) {
+      plVideos = playlists.get(playlistName); // retrieving list of VideoID's from playlist.
+      plVideos.add(videoId); // adding new videoID to list.
+      playlists.put(playlistName, plVideos); // adding updated list into playlist.
+
+      System.out.println("Added video to my_PLAYlist: " + videoLibrary.getVideo(videoId).getTitle());
+    }
   }
 
   public void showAllPlaylists() {

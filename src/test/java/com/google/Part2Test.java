@@ -27,7 +27,6 @@ public class Part2Test extends TestBase {
         containsString("Cannot create playlist: A playlist with the same name already exists"));
   }
 
-  /*
   @Test
   public void testAddToPlaylist() {
     videoPlayer.createPlaylist("my_playlist");
